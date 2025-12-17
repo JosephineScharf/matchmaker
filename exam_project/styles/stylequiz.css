@@ -20,9 +20,7 @@ button {
   cursor: pointer;
 }
 
-/* =========================
-   FONTS
-========================= */
+
 @font-face {
   font-family: "Exmouth";
   src: url("../assets/font/exmouth_.ttf") format("truetype");
@@ -34,9 +32,7 @@ button {
   font-weight: 400;
 }
 
-/* =========================
-   BURGER MENU
-========================= */
+
 .menu-btn {
   position: fixed;
   top: 0;
@@ -75,9 +71,7 @@ button {
   color: #1a1a1a;
 }
 
-/* =========================
-   PAGE LAYOUT
-========================= */
+
 .mm-page {
   position: relative;
   min-height: 100vh;
@@ -108,7 +102,7 @@ button {
   margin-bottom: 40px;
 }
 
-/* Decorative bottom illustration */
+
 .mm-bottom {
   position: absolute;
   left: 50%;
@@ -129,9 +123,7 @@ button {
     width: 200vw;      
     height: 30vh; }}
 
-/* =========================
-   CARD
-========================= */
+
 .mm-card {
   position: relative;
   z-index: 3;
@@ -169,7 +161,7 @@ button {
   opacity: 0.95;
 }
 
-/* Primary button */
+
 .mm-btn {
   background: #282418;
   color: #d6cfbf;
@@ -189,9 +181,7 @@ button {
   filter: brightness(1.05);
 }
 
-/* =========================
-   QUIZ CONTENT (inside card)
-========================= */
+
 .mm-q {
   padding-bottom: 170px;
 }
@@ -203,7 +193,7 @@ button {
   opacity: 0.95;
 }
 
-/* Picture block */
+
 .quiz-pic {
   width: min(520px, 100%);
   margin: 8px auto 10px;
@@ -217,7 +207,7 @@ button {
   display: block;
 }
 
-/* Answer grid */
+
 .quiz-answers {
   width: min(760px, 100%);
   display: grid;
@@ -231,7 +221,7 @@ button {
   }
 }
 
-/* Answer button */
+
 .answer-box {
   background: transparent;
   border: 1px solid rgba(26, 26, 26, 0.28);
@@ -256,13 +246,13 @@ button {
   border-color: rgba(26, 26, 26, 0.75);
 }
 
-/* Continue disabled state */
+
 #continueBtn:disabled {
   opacity: 0.55;
   cursor: not-allowed;
 }
 
-/* Back arrow + centered continue */
+
 .quiz-actions {
   position: relative;
   display: flex;
@@ -270,9 +260,8 @@ button {
   align-items: center;
   margin-top: 6px;
 
-  padding-left: 56px;   /* reserve space for arrow */
-  padding-right: 56px;  /* keep centered */
-}
+  padding-left: 56px;   
+  padding-right: 56px;  
 
 .quiz-back {
   position: absolute;
@@ -283,7 +272,7 @@ button {
   z-index: 2;
 }
 
-/* 3 options: third centered on desktop */
+
 @media (min-width: 760px) {
   .quiz-answers-3 {
     grid-template-columns: 1fr 1fr;
@@ -296,9 +285,7 @@ button {
   }
 }
 
-/* =========================
-   RESULT PAGE
-========================= */
+
 .result-pic {
   width: min(520px, 100%);
   margin: 6px auto 6px;
@@ -319,11 +306,6 @@ button {
   opacity: 0.95;
 }
 
-/* =========================
-   RESPONSIVE LAYOUT RULES
-========================= */
-
-/* Desktop: no scroll, structured layout */
 @media (min-width: 900px) {
   .mm-page {
     height: 100vh;
@@ -333,13 +315,13 @@ button {
     overflow: hidden;
   }
 
-  /* Keep title above card */
+
   .mm-title {
     margin-bottom: 32px;
     font-size: clamp(70px, 7.2vw, 132px);
   }
 
-  /* Card slightly smaller/tighter so everything fits */
+ 
   .mm-card {
   width: min(880px, 76vw);
   min-height: 280px;
@@ -349,14 +331,14 @@ button {
   margin-bottom: 0;
   }
 
-  /* Reduce media sizes slightly on desktop */
+
   .quiz-pic,
   .result-pic {
     width: min(520px, 100%);
     margin: 6px auto 8px;
   }
 
-  /* Slightly tighter answers */
+
   .quiz-answers {
     gap: 10px;
     margin: 8px auto 10px;
@@ -367,7 +349,7 @@ button {
   }
 }
 
-/* Mobile/tablet: vertical centering */
+
 @media (max-width: 899px) {
   .mm-page {
     display: flex;
@@ -378,4 +360,4 @@ button {
     margin-top: auto;
     margin-bottom: auto;
   }
-}
+}}

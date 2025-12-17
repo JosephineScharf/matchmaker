@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Favorites — Matchmaker</title>
+  <link rel="stylesheet" href="../styles/favorite.css" />
+</head>
+
+<body>
+ 
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+
+  
+  <nav class="burger-menu" id="burgerMenu" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="startquiz.html">Quiz</a>
+    <a href="grandgarden.html">Grand Garden</a>
+    <a href="japanesepalace.html">Japanese Palace</a>
+    <a href="lingnercastle.html">Lingner Castle</a>
+    <a href="favorites.html">Favorites</a>
+  </nav>
+
+<header class="hero">
+  <div class="hero-text">
+    <div class="location">DRESDEN</div>
+    <p class="title">Matchmaker</p>
+  </div>
+</header>
+
+   
+    <section class="favorites-wrap">
+      <div class="favorites-header">
+        <div class="favorites-label">FAVORITES</div>
+        <button class="filter-pill" id="filterBtn" type="button">FILTER</button>
+      </div>
+
+      <div class="favorites-list" id="favoritesList">
+        
+        <article class="fav-card" data-vibe="soft">
+          <div class="fav-image">
+            <img src="../assets/images/resultsoft.png" alt="Japanese Palace Gardens" />
+          </div>
+
+          <div class="fav-content">
+            <h2 class="fav-title">JAPANESE PALACE GARDENS</h2>
+            <span class="fav-tag">Soft &amp; Peaceful</span>
+            <p class="fav-desc">
+              A calm, open garden with soft light and quiet paths, perfect for slowing down together.
+            </p>
+          </div>
+
+          <button class="fav-like" type="button" aria-label="Remove from favorites" title="Remove">
+            <svg xmlns="http://www.w3.org/2000/svg" width="41" height="37" viewBox="0 0 41 37" fill="none">
+<path d="M30.1094 0.000976563C31.6175 0.000976563 33.0322 0.294922 34.3535 0.882812C35.6748 1.4707 36.8293 2.26367 37.8169 3.26172C38.8045 4.25977 39.5786 5.44238 40.1392 6.80957C40.6997 8.17676 40.9867 9.62598 41 11.1572C41 12.6475 40.7264 14.0762 40.1792 15.4434C39.632 16.8105 38.8446 18.0137 37.8169 19.0527L20.5 36.7715L3.18311 19.0527C2.16878 18.0137 1.38802 16.8105 0.84082 15.4434C0.29362 14.0762 0.0133464 12.6475 0 11.1572C0 9.62598 0.280273 8.18359 0.84082 6.83008C1.40137 5.47656 2.18213 4.29395 3.18311 3.28223C4.18408 2.27051 5.33854 1.4707 6.64648 0.882812C7.95443 0.294922 9.36914 0.000976563 10.8906 0.000976563C11.9984 0.000976563 12.986 0.130859 13.8535 0.390625C14.721 0.650391 15.5218 1.00586 16.2559 1.45703C16.9899 1.9082 17.6973 2.46191 18.3779 3.11816C19.0586 3.77441 19.766 4.47852 20.5 5.23047C21.234 4.46484 21.9347 3.76074 22.6021 3.11816C23.2694 2.47559 23.9767 1.92871 24.7241 1.47754C25.4715 1.02637 26.279 0.664062 27.1465 0.390625C28.014 0.117188 29.0016 -0.0126953 30.1094 0.000976563ZM35.9951 17.1865C36.7826 16.3799 37.3831 15.457 37.7969 14.418C38.2106 13.3789 38.4175 12.292 38.4175 11.1572C38.4175 9.96777 38.2039 8.86035 37.7769 7.83496C37.3498 6.80957 36.7625 5.91406 36.0151 5.14844C35.2677 4.38281 34.3869 3.78809 33.3726 3.36426C32.3582 2.94043 31.2705 2.72168 30.1094 2.70801C28.9883 2.70801 27.994 2.88574 27.1265 3.24121C26.259 3.59668 25.4582 4.0752 24.7241 4.67676C23.9901 5.27832 23.2894 5.94141 22.6221 6.66602C21.9548 7.39062 21.2474 8.14941 20.5 8.94238C19.7793 8.2041 19.0786 7.45898 18.3979 6.70703C17.7173 5.95508 17.0099 5.27832 16.2759 4.67676C15.5418 4.0752 14.7344 3.58301 13.8535 3.2002C12.9727 2.81738 11.985 2.62598 10.8906 2.62598C9.74284 2.62598 8.66178 2.84473 7.64746 3.28223C6.63314 3.71973 5.75228 4.32813 5.00488 5.10742C4.25749 5.88672 3.66357 6.7959 3.22314 7.83496C2.78271 8.87402 2.5625 9.98145 2.5625 11.1572C2.5625 12.292 2.76937 13.3789 3.18311 14.418C3.59684 15.457 4.2041 16.3799 5.00488 17.1865L20.5 33.0596L35.9951 17.1865Z" fill="black"/>
+</svg>
+          </button>
+        </article>
+
+       
+        <article class="fav-card" data-vibe="quiet">
+          <div class="fav-image">
+            <img src="../assets/images/resultquiet.png" alt="The Grand Garden" />
+          </div>
+
+          <div class="fav-content">
+            <h2 class="fav-title">THE GRAND GARDEN</h2>
+            <span class="fav-tag">Quiet &amp; Hidden</span>
+            <p class="fav-desc">
+              Secluded paths and quiet corners that feel private, intimate, and slightly hidden from the world.
+            </p>
+          </div>
+
+          <button class="fav-like" type="button" aria-label="Remove from favorites" title="Remove">
+            <svg xmlns="http://www.w3.org/2000/svg" width="41" height="37" viewBox="0 0 41 37" fill="none">
+<path d="M30.1094 0.000976563C31.6175 0.000976563 33.0322 0.294922 34.3535 0.882812C35.6748 1.4707 36.8293 2.26367 37.8169 3.26172C38.8045 4.25977 39.5786 5.44238 40.1392 6.80957C40.6997 8.17676 40.9867 9.62598 41 11.1572C41 12.6475 40.7264 14.0762 40.1792 15.4434C39.632 16.8105 38.8446 18.0137 37.8169 19.0527L20.5 36.7715L3.18311 19.0527C2.16878 18.0137 1.38802 16.8105 0.84082 15.4434C0.29362 14.0762 0.0133464 12.6475 0 11.1572C0 9.62598 0.280273 8.18359 0.84082 6.83008C1.40137 5.47656 2.18213 4.29395 3.18311 3.28223C4.18408 2.27051 5.33854 1.4707 6.64648 0.882812C7.95443 0.294922 9.36914 0.000976563 10.8906 0.000976563C11.9984 0.000976563 12.986 0.130859 13.8535 0.390625C14.721 0.650391 15.5218 1.00586 16.2559 1.45703C16.9899 1.9082 17.6973 2.46191 18.3779 3.11816C19.0586 3.77441 19.766 4.47852 20.5 5.23047C21.234 4.46484 21.9347 3.76074 22.6021 3.11816C23.2694 2.47559 23.9767 1.92871 24.7241 1.47754C25.4715 1.02637 26.279 0.664062 27.1465 0.390625C28.014 0.117188 29.0016 -0.0126953 30.1094 0.000976563ZM35.9951 17.1865C36.7826 16.3799 37.3831 15.457 37.7969 14.418C38.2106 13.3789 38.4175 12.292 38.4175 11.1572C38.4175 9.96777 38.2039 8.86035 37.7769 7.83496C37.3498 6.80957 36.7625 5.91406 36.0151 5.14844C35.2677 4.38281 34.3869 3.78809 33.3726 3.36426C32.3582 2.94043 31.2705 2.72168 30.1094 2.70801C28.9883 2.70801 27.994 2.88574 27.1265 3.24121C26.259 3.59668 25.4582 4.0752 24.7241 4.67676C23.9901 5.27832 23.2894 5.94141 22.6221 6.66602C21.9548 7.39062 21.2474 8.14941 20.5 8.94238C19.7793 8.2041 19.0786 7.45898 18.3979 6.70703C17.7173 5.95508 17.0099 5.27832 16.2759 4.67676C15.5418 4.0752 14.7344 3.58301 13.8535 3.2002C12.9727 2.81738 11.985 2.62598 10.8906 2.62598C9.74284 2.62598 8.66178 2.84473 7.64746 3.28223C6.63314 3.71973 5.75228 4.32813 5.00488 5.10742C4.25749 5.88672 3.66357 6.7959 3.22314 7.83496C2.78271 8.87402 2.5625 9.98145 2.5625 11.1572C2.5625 12.292 2.76937 13.3789 3.18311 14.418C3.59684 15.457 4.2041 16.3799 5.00488 17.1865L20.5 33.0596L35.9951 17.1865Z" fill="black"/>
+</svg>
+          </button>
+        </article>
+      </div>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="mm-bottom" aria-hidden="true">
+    <img src="../assets/images/sketchbig.png" alt="">
+  </div>
+
+</main>
+
+</body>
+<script src="../assets/js/javascript.js"></script>
+
+  
+</body>
+</html>
