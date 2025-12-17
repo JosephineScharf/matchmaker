@@ -1,0 +1,321 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #D5CEBE;
+}
+
+img {
+  display: block;   
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+}
+
+
+@font-face {
+  font-family: "Exmouth";
+  src: url("../fonts/exmouth_.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Amiri";
+  src: url("../fonts/Amiri-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Amiri";
+  src: url("../fonts/Amiri-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Amiri";
+  src: url("../fonts/Amiri-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Amiri";
+  src: url("../fonts/Amiri-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  font-family: "Amiri", serif;
+  color: #1a1a1a;
+}
+
+.intro-text,
+.intro-sub,
+.image-text  {
+  width: 70vw;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* =========================
+   BURGER MENU
+========================= */
+.menu-btn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 26px;
+  background: #B6B0A2;
+  border: none;
+  padding: 20px 20px;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.burger-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100vh;
+  background: #B6B0A2;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 80px 20px 20px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 9999;
+}
+
+.burger-menu.open {
+  transform: translateX(0);
+}
+
+.burger-menu a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #1a1a1a;
+}
+
+
+/* =========================
+   PAGE 
+========================= */
+.page {
+ position: relative;
+  padding-bottom: 0; 
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #D5CEBE;
+  overflow: hidden;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  position: relative;
+  height: clamp(220px, 36vw, 360px);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.location {
+  position: absolute;
+  top: clamp(14px, 2.2vw, 24px);
+  left: 50%;
+  transform: translateX(-50%);
+  letter-spacing: 0.3em;
+  font-size: clamp(12px, 1.2vw, 14px);
+  color: #ffffff;
+}
+
+.title {
+  position: absolute;
+  top: 50%;                 
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-family: "Exmouth", cursive;
+  font-size: clamp(56px, 9vw, 110px);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+
+  color: rgba(213, 206, 190, 0.95);
+  line-height: 1;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* =========================
+   INTRO
+========================= */
+.intro {
+  text-align: center;
+  padding: clamp(28px, 5vw, 56px) clamp(18px, 4vw, 80px);
+}
+
+.intro-text {
+  font-size: clamp(13px, 1.7vw, 25px);
+  margin-bottom: clamp(16px, 3vw, 24px);
+  font-weight: 700;
+}
+
+.icon-box {
+  width: clamp(120px, 30vw, 170px);
+  height: clamp(56px, 12vw, 74px);
+  margin: 0 auto clamp(14px, 2.5vw, 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box img {
+  width: clamp(86px, 18vw, 120px);
+}
+
+.intro-sub {
+  font-size: clamp(20px, 1.4vw, 36px);
+  font-family: "Exmouth", cursive;
+  max-width: 56ch;
+  margin: 0 auto;
+  line-height: 1.5;
+  color: rgba(26,26,26,0.85);
+}
+
+
+.lace-divider {
+  height: clamp(18px, 2.6vw, 42px);
+}
+
+
+.image-section {
+  position: relative;
+  height: auto;   
+}
+
+.image-section img {
+  width: 100%;
+  height: 40vh;  
+}
+
+.image-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 clamp(18px, 4vw, 80px);
+  text-align: center;
+
+  color: rgba(255,255,255,0.88);
+  font-size: clamp(14px, 1.7vw, 18px);
+  line-height: 1.6;
+}
+
+/* =========================
+   QUIZ
+========================= */
+.quiz{
+   position: relative;
+  text-align: center;
+
+  padding: clamp(22px, 4vw, 44px) 0 90px; 
+  
+  overflow: hidden;
+  z-index: 2;
+}
+.quiz-text{
+    font-size: clamp(20px, 1.4vw, 40px);
+  font-family: "Exmouth", cursive; }
+
+
+.quiz-text,
+.quiz-button{
+  position: relative;
+  z-index: 3;
+  margin-bottom: 40px;                        
+}
+
+.quiz-button{
+  background: #282418;
+  color: #d6cfbf;
+  border: none;
+  font-style: italic;
+  padding: 12px 36px;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  border-radius: 6px;
+  font-family: "Amiri", serif;
+  font-weight: 400;
+  
+}
+
+
+.quiz-illustration{
+position: absolute;
+  left: 50%;
+  bottom: 0;
+
+  transform: translateX(-50%); 
+  width: 100vw;
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+.quiz-illustration img{
+  width: 100%;
+  height: auto;
+  display: block;
+  
+}
+
+/* =========================
+   RESPONSIVE FIXES
+========================= */
+@media (max-width: 480px) {
+  .title {
+    white-space: normal;   
+  }
+
+  .burger-menu {
+    width: 80vw;
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page {
+    max-width: 1120px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .page {
+    max-width: 1120px;
+  }
+}
