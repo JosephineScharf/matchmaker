@@ -90,6 +90,7 @@ button {
   font-size: clamp(56px, 9vw, 150px);
   line-height: 0.9;
   z-index: 1;
+  margin-bottom: 40px;
 }
 
 
@@ -260,4 +261,40 @@ button {
 #continueBtn:disabled{
   opacity: 0.55;
   cursor: not-allowed;
+}
+.quiz-actions{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6px;
+
+  padding-left: 56px;  /* space for the arrow */
+  padding-right: 56px; /* keeps it balanced */
+}
+
+.quiz-back{
+  position: absolute;
+  left: 0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  z-index: 2; 
+
+}
+@media (min-width: 760px){
+  .quiz-answers-3{
+    grid-template-columns: 1fr 1fr;
+  }
+  .quiz-answers-3 .answer-box:nth-child(3){
+    grid-column: 1 / -1;      /* span both columns */
+    justify-self: center;     /* center it */
+    width: min(360px, 100%);  /* prevents it becoming full width */
+  }
+}
+.result-text{
+    margin: 0;
+    font-family: Exmouth, serif;
+    font-size: clamp(40px, 1.4vw, 60px)
 }

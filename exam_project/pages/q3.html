@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../styles/stylequiz.css">
+  <title>Matchmaker Dresden | Quiz</title>
+</head>
+
+<body>
+  <!-- Menu Button -->
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+
+  <!-- Burger Menu -->
+  <nav class="burger-menu" id="burgerMenu" aria-label="Menu">
+    <a href="index.html">Home</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="#">Grand Garden</a>
+    <a href="#">Japanese Palace</a>
+    <a href="#">Lingner Castle</a>
+    <a href="#">Favorites</a>
+  </nav>
+
+  <main class="mm-page mm-q">
+   <div class="mm-location">DRESDEN</div>
+
+  <p class="mm-title">Matchmaker</p>
+
+  <section class="mm-card" aria-labelledby="quizIntro">
+    <p class="mm-card-kicker">MOODQUIZ</p>
+        <div class="quiz-pic">
+            <img src="../assets/images/q3.png" alt="">
+        </div>
+    <p class="mm-card-text" id="quizIntro">
+            What kind of closeness do you want?   </p>
+
+      <div class="quiz-answers">
+        <button class="answer-box" type="button" data-mood="quiet">
+          Quiet, just the two of you
+        </button>
+
+        <button class="answer-box" type="button" data-mood="warm">
+          Sharing stories, staying longer
+        </button>
+      </div>
+
+      <div class="quiz-actions">
+        <a class="quiz-back" href="q2.html" aria-label="Back">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                  <path d="M5.6875 12.1875H21.9375C22.153 12.1875 22.3597 12.2731 22.512 12.4255C22.6644 12.5778 22.75 12.7845 22.75 13C22.75 13.2155 22.6644 13.4222 22.512 13.5745C22.3597 13.7269 22.153 13.8125 21.9375 13.8125H5.6875C5.47201 13.8125 5.26535 13.7269 5.11298 13.5745C4.9606 13.4222 4.875 13.2155 4.875 13C4.875 12.7845 4.9606 12.5778 5.11298 12.4255C5.26535 12.2731 5.47201 12.1875 5.6875 12.1875Z" fill="black"/>
+                <path d="M6.02386 13L12.7627 19.7373C12.9153 19.8899 13.001 20.0968 13.001 20.3125C13.001 20.5283 12.9153 20.7352 12.7627 20.8878C12.6102 21.0404 12.4032 21.1261 12.1875 21.1261C11.9717 21.1261 11.7648 21.0404 11.6122 20.8878L4.29974 13.5753C4.22407 13.4998 4.16404 13.4102 4.12308 13.3115C4.08212 13.2127 4.06104 13.1069 4.06104 13C4.06104 12.8932 4.08212 12.7874 4.12308 12.6886C4.16404 12.5899 4.22407 12.5003 4.29974 12.4248L11.6122 5.1123C11.7648 4.95973 11.9717 4.87402 12.1875 4.87402C12.4032 4.87402 12.6102 4.95973 12.7627 5.1123C12.9153 5.26487 13.001 5.47179 13.001 5.68755C13.001 5.90331 12.9153 6.11023 12.7627 6.2628L6.02386 13Z" fill="black"/>
+                    </svg>
+        </a>
+
+        <button class="mm-btn" id="continueBtn" type="button" disabled>
+          CONTINUE
+        </button>
+      </div>
+    </section>
+
+    <div class="mm-bottom" aria-hidden="true">
+      <img src="../assets/images/sketch_bg.png" alt="">
+    </div>
+  </main>
+
+  <script src="../assets/js/javascript.js" defer></script>
+</body>
+</html>
