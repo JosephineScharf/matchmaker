@@ -134,11 +134,13 @@ body {
 .hero {
   position: relative;
   height: clamp(220px, 36vw, 360px);
+  
 }
 
 .hero-image {
   width: 100%;
   height: 100%;
+  
   object-fit: cover;
 }
 
