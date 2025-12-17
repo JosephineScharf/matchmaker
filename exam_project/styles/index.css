@@ -1,18 +1,21 @@
-
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* IMPORTANT: avoid accidental horizontal overflow */
 html, body {
+  width: 100%;
   margin: 0;
   padding: 0;
   background-color: #D5CEBE;
+  overflow-x: hidden;
 }
 
 img {
-  display: block;   
+  display: block;
   max-width: 100%;
 }
 
@@ -20,7 +23,7 @@ button {
   font: inherit;
 }
 
-
+/* FONTS */
 @font-face {
   font-family: "Exmouth";
   src: url("../fonts/exmouth_.ttf") format("truetype");
@@ -56,21 +59,10 @@ button {
   font-style: italic;
 }
 
-/* =========================
-   BODY
-========================= */
+/* BODY */
 body {
   font-family: "Amiri", serif;
   color: #1a1a1a;
-}
-
-.intro-text,
-.intro-sub,
-.image-text  {
-  width: 70vw;
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
 }
 
 /* =========================
@@ -114,33 +106,28 @@ body {
   color: #1a1a1a;
 }
 
-
 /* =========================
-   PAGE 
+   PAGE (FULL WIDTH)
 ========================= */
 .page {
- position: relative;
-  padding-bottom: 0; 
   width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: none;    /* <-- removed constraint */
+  margin: 0;          /* <-- removed centering gap */
   background: #D5CEBE;
-  overflow: hidden;
 }
 
 /* =========================
-   HERO
+   HERO (FULL WIDTH)
 ========================= */
 .hero {
   position: relative;
+  width: 100%;
   height: clamp(220px, 36vw, 360px);
-  
 }
 
 .hero-image {
   width: 100%;
   height: 100%;
-  
   object-fit: cover;
 }
 
@@ -156,15 +143,13 @@ body {
 
 .title {
   position: absolute;
-  top: 50%;                 
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   font-family: "Exmouth", cursive;
   font-size: clamp(56px, 9vw, 110px);
   font-weight: 300;
   letter-spacing: 0.02em;
-
   color: rgba(213, 206, 190, 0.95);
   line-height: 1;
   white-space: nowrap;
@@ -172,11 +157,20 @@ body {
 }
 
 /* =========================
-   INTRO
+   INTRO (TEXT STILL CENTERED)
 ========================= */
 .intro {
   text-align: center;
   padding: clamp(28px, 5vw, 56px) clamp(18px, 4vw, 80px);
+}
+
+.intro-text,
+.intro-sub,
+.image-text {
+  width: 70vw;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .intro-text {
@@ -195,11 +189,11 @@ body {
 }
 
 .icon-box img {
-  width: clamp(86px, 18vw, 120px);
+  width: clamp(100px, 18vw, 200px);
 }
 
 .intro-sub {
-  font-size: clamp(20px, 1.4vw, 36px);
+  font-size: clamp(22px, 2.5vw, 38px);
   font-family: "Exmouth", cursive;
   max-width: 56ch;
   margin: 0 auto;
@@ -212,15 +206,17 @@ body {
   height: clamp(18px, 2.6vw, 42px);
 }
 
-
+/* =========================
+   IMAGE SECTION (FULL WIDTH)
+========================= */
 .image-section {
   position: relative;
-  height: auto;   
+  width: 100%;
 }
 
 .image-section img {
   width: 100%;
-  height: 40vh;  
+
 }
 
 .image-text {
@@ -229,95 +225,82 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 0 clamp(18px, 4vw, 80px);
-  text-align: center;
-
   color: rgba(255,255,255,0.88);
-  font-size: clamp(14px, 1.7vw, 18px);
+  font-size: clamp(22px, 1.5vw, 38px);
   line-height: 1.6;
 }
 
-/* =========================
-   QUIZ
-========================= */
-.quiz{
-   position: relative;
-  text-align: center;
-
-  padding: clamp(22px, 4vw, 44px) 0 90px; 
-  
-  overflow: hidden;
-  z-index: 2;
-}
-.quiz-text{
-    font-size: clamp(20px, 1.4vw, 40px);
-  font-family: "Exmouth", cursive; }
-
-
-.quiz-text,
-.quiz-button{
-  position: relative;
-  z-index: 3;
-  margin-bottom: 40px;                        
-}
 
 .quiz-button{
   background: #282418;
   color: #d6cfbf;
   border: none;
+  border-radius: 8px;
+  padding: 12px 40px;
+  letter-spacing: .18em;
   font-style: italic;
-  padding: 12px 36px;
-  letter-spacing: 0.2em;
   cursor: pointer;
-  border-radius: 6px;
-  font-family: "Amiri", serif;
-  font-weight: 400;
-  
+  position: relative;
+  z-index: 2;
 }
 
+.quiz-area{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: clamp(38px, 7vw, 80px) clamp(18px, 4vw, 80px);
+}
+
+
+.quiz-section{
+  position: relative;
+  z-index: 2; 
+  width: min(600px, 100%);
+  background: #ECE7DE;
+  border-radius: 6px;
+  box-shadow: 0 12px 34px rgba(0,0,0,.10);
+  text-align: center;
+
+  
+  padding: clamp(38px, 7vw, 80px) clamp(18px, 4vw, 80px) clamp(60px, 10vw, 110px);
+
+  overflow: hidden;
+}
 
 .quiz-illustration{
-position: absolute;
+  position: absolute;
   left: 50%;
   bottom: 0;
-
-  transform: translateX(-50%); 
+  transform: translateX(-50%);
   width: 100vw;
-  z-index: 1;
+  z-index: 1; 
   pointer-events: none;
 }
-
 
 .quiz-illustration img{
   width: 100%;
   height: auto;
   display: block;
-  
+  opacity: 0.5;
 }
 
-/* =========================
-   RESPONSIVE FIXES
-========================= */
+.quiz-script{
+  position: relative;
+  z-index: 3;
+  font-family: "Exmouth", cursive;
+  font-size: clamp(22px, 3.2vw, 38px);
+  line-height: 1.05;
+  margin-bottom: 18px;
+}
+
+
+/* RESPONSIVE */
 @media (max-width: 480px) {
-  .title {
-    white-space: normal;   
-  }
+  .title { white-space: normal; }
 
   .burger-menu {
     width: 80vw;
     max-width: 300px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .page {
-    max-width: 1120px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .page {
-    max-width: 1120px;
   }
 }

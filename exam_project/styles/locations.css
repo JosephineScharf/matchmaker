@@ -185,7 +185,7 @@ html, body {
   gap: clamp(22px, 4vw, 44px);
 }
 
-/* desktop: two columns */
+
 @media (min-width: 900px){
   .grand-block{
     grid-template-columns: 1.2fr 0.8fr;  /* left bigger than right */
@@ -223,14 +223,14 @@ html, body {
   object-fit: cover;
 }
 
-/* collage geometry */
+
 .g--wide{ grid-column: 1 / -1; aspect-ratio: 16/9; }
 .g--left{ aspect-ratio: 3/4; }
 .g--right{ aspect-ratio: 3/4; }
 .g--bottom-left{ aspect-ratio: 1/1; }
 .g--bottom-right{ aspect-ratio: 1/1; }
 
-/* subtle editorial offsets (optional but closer to hi-fi) */
+
 .g--left{ margin-top: 8px; }
 .g--right{ margin-top: -4px; }
 .g--bottom-left{ margin-top: 6px; }
@@ -299,7 +299,7 @@ html, body {
 /* =========================
    SECRET SPOTS (FLEX VERSION)
 ========================= */
-/* SECTION */
+
 .spots{
   padding: clamp(34px, 6vw, 70px) clamp(18px, 4vw, 80px);
 }
@@ -311,20 +311,20 @@ html, body {
   color: black;
 }
 
-/* wrapper for the 3 cards */
+
 .spots-wrap{
   display: flex;
   flex-direction: column;
   gap: clamp(28px, 5vw, 56px);
 }
 
-/* one spot card */
+
 .spot-card{
   display: flex;
   gap: clamp(22px, 4vw, 70px);
 }
 
-/* left block (title + image stacked) */
+
 .spot-media{
   display: flex;
   flex-direction: column;
@@ -332,7 +332,7 @@ html, body {
   flex: 0 0 clamp(260px, 34vw, 380px);
 }
 
-/* title */
+
 .spot-title{
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -344,7 +344,7 @@ html, body {
   text-align: right;
 }
 
-/* image */
+
 .spot-img{
   width: 100%;
   max-width: 360px;     /* looks like design on desktop */
@@ -354,7 +354,7 @@ html, body {
 }
 
 
-/* right block (text) */
+
 .spot-text{
   flex: 1 1 auto;
   display: flex;
@@ -371,7 +371,7 @@ html, body {
   font-size: clamp(14px, 2.5vw, 32px);
 }
 
-/* reverse card (image on right, text on left) */
+
 .spot-card--reverse{
   flex-direction: row-reverse;
 }
@@ -384,7 +384,7 @@ html, body {
   margin-left: auto;
 }
 
-/* illustration under text (row 3) */
+
 .spot-illu{
   width: clamp(90px, 15vw, 200px);
   margin-top: clamp(14px, 2.6vw, 28px);
@@ -392,9 +392,6 @@ html, body {
   opacity: .75;
   align-self: flex-end;
 }
-
-
-
 
 /* =========================
    CONVERSATION STARTERS
@@ -490,8 +487,6 @@ html, body {
   z-index: 2;
 }
 
-
-/* text */
 .audio-text{
   max-width: 60ch;
   line-height: 1.85;
@@ -501,7 +496,6 @@ html, body {
   z-index: 2;
 }
 
-/* wide image */
 .audio-wide img{
   width: 100%;
   height: clamp(160px, 28vw, 240px);
@@ -512,7 +506,7 @@ html, body {
 
 /* ===== QUIZ BLOCK ===== */
 
-/* button */
+
 .quiz-button{
   background: #282418;
   color: #d6cfbf;
@@ -525,7 +519,7 @@ html, body {
   position: relative;
   z-index: 2;
 }
-/* WRAPPER: centers the card + holds the background illustration */
+
 .quiz-area{
   position: relative;
   display: flex;
@@ -533,7 +527,7 @@ html, body {
   padding: clamp(38px, 7vw, 80px) clamp(18px, 4vw, 80px);
 }
 
-/* THE WHITE CARD */
+
 .quiz-section{
   position: relative;
   z-index: 2; /* on top of illustration */
@@ -543,13 +537,12 @@ html, body {
   box-shadow: 0 12px 34px rgba(0,0,0,.10);
   text-align: center;
 
-  /* your spacing */
+  
   padding: clamp(38px, 7vw, 80px) clamp(18px, 4vw, 80px) clamp(60px, 10vw, 110px);
 
   overflow: hidden; /* keeps illustration edges clean */
 }
 
-/* ILLUSTRATION BEHIND CARD */
 .quiz-illustration{
   position: absolute;
   left: 50%;
@@ -576,11 +569,6 @@ html, body {
   margin-bottom: 18px;
 }
 
-
-
-
-
-/* MOBILE */
 @media (max-width: 640px){
   .audio-row{
     gap: 14px;
