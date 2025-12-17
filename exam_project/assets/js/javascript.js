@@ -1,3 +1,7 @@
+/* =========================
+   QUIZ + MENU SCRIPT (ALL PAGES)
+========================= */
+
 const QUIZ_KEY = "matchmakerQuizScores";
 
 /* =========================
@@ -26,7 +30,7 @@ function resetScores() {
 ========================= */
 function getPageName() {
   const path = window.location.pathname;
-  return path.substring(path.lastIndexOf("/") + 1);
+  return path.substring(path.lastIndexOf("/") + 1) || "index.html";
 }
 
 function nextPageFor(current) {
@@ -55,17 +59,72 @@ function resultPageFor(winner) {
 }
 
 /* =========================
-   DOM READY
+   MENU HELPERS
 ========================= */
-document.addEventListener("DOMContentLoaded", () => {
+// These must match your <a href="..."> filenames in the burger menu!
+const MENU_PAGES = new Set([
+  "index.html",
+  "startquiz.html",
+  "grandgarden.html",
+  "japanesepalace.html",
+  "lingnercastle.html",
+  "favorites.html"
+]);
 
-    const goQuizBtn = document.getElementById("gotoQuizBtn");
+function closeMenu(burgerMenu) {
+  burgerMenu.classList.remove("open");
+}
 
-if (goQuizBtn) {
-  goQuizBtn.addEventListener("click", () => {
-    window.location.href = "startquiz.html";
+function setActiveMenuLink() {
+  const burgerMenu = document.getElementById("burgerMenu");
+  if (!burgerMenu) return;
+
+  const current = getPageName();
+
+  burgerMenu.querySelectorAll("a").forEach((a) => {
+    const href = a.getAttribute("href");
+    if (!href) return;
+
+    // mark active if exact match
+    if (href === current) a.classList.add("active");
+    else a.classList.remove("active");
   });
 }
+
+/* =========================
+   BUTTONS + QUIZ LOGIC
+========================= */
+document.addEventListener("DOMContentLoaded", () => {
+  /* =========================
+     OPTIONAL "MORE INFO" BUTTONS
+  ========================= */
+  const moreInfoBtn1 = document.getElementById("moreInfoBtn1");
+  if (moreInfoBtn1) {
+    moreInfoBtn1.addEventListener("click", () => {
+      window.location.href = "grandgarden.html";
+    });
+  }
+
+  const moreInfoBtn2 = document.getElementById("moreInfoBtn2");
+  if (moreInfoBtn2) {
+    moreInfoBtn2.addEventListener("click", () => {
+      window.location.href = "japanesepalace.html";
+    });
+  }
+
+  const moreInfoBtn3 = document.getElementById("moreInfoBtn3");
+  if (moreInfoBtn3) {
+    moreInfoBtn3.addEventListener("click", () => {
+      window.location.href = "lingnercastle.html";
+    });
+  }
+
+  const goQuizBtn = document.getElementById("quizBtn");
+  if (goQuizBtn) {
+    goQuizBtn.addEventListener("click", () => {
+      window.location.href = "startquiz.html";
+    });
+  }
 
   /* =========================
      BURGER MENU (ALL PAGES)
@@ -74,13 +133,36 @@ if (goQuizBtn) {
   const burgerMenu = document.getElementById("burgerMenu");
 
   if (menuBtn && burgerMenu) {
+    // Toggle open/close
     menuBtn.addEventListener("click", () => {
       burgerMenu.classList.toggle("open");
     });
+
+    // Close after clicking a link (so it feels smooth on mobile)
+    burgerMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        closeMenu(burgerMenu);
+      });
+    });
+
+    // Close if clicking outside the menu
+    document.addEventListener("click", (e) => {
+      const clickedInsideMenu = burgerMenu.contains(e.target);
+      const clickedMenuBtn = menuBtn.contains(e.target);
+      if (!clickedInsideMenu && !clickedMenuBtn) closeMenu(burgerMenu);
+    });
+
+    // Optional: close on ESC
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMenu(burgerMenu);
+    });
   }
 
+  // Highlight active link (optional)
+  setActiveMenuLink();
+
   /* =========================
-     START PAGE (quiz.html)
+     START PAGE (startquiz.html)
   ========================= */
   const startBtn = document.getElementById("startBtn");
   if (startBtn) {
