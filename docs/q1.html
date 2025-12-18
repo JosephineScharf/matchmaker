@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../styles/stylequiz.css">
-  <title>Matchmaker | Result</title>
+  <link rel="stylesheet" href="styles/stylequiz.css">
+  <title>Matchmaker | Quiz</title>
 
 </head>
 <body>
@@ -20,7 +20,7 @@
   <a href="lingnercastle.html">Lingner Castle</a>
   <a href="favorites.html">Favorites</a>
   </nav>
-
+  
 <main class="mm-page">
 
   <div class="mm-location">DRESDEN</div>
@@ -29,27 +29,37 @@
 
   <section class="mm-card" aria-labelledby="quizIntro">
     <p class="mm-card-kicker">MOODQUIZ</p>
-
-    <p class="mm-card-text" id="quizIntro" style="font-weight: bold;">
-      your result 
+        <div class="quiz-pic">
+    <img src="assets/images/q1.png" alt="">
+        </div>
+    <p class="mm-card-text" id="quizIntro">
+      Which situation do you prefer?
     </p>
-    <div class="result-pic">
-    <img src="../assets/images/resultquiet.png">
-   </div>
-    <p class="result-text"> The Grand Garden</p>
 
-    <button class="mm-btn"type="button" id="moreInfoBtn1">
-      MORE INFO
+<div class="quiz-answers">
+        <button class="answer-box" type="button" data-mood="soft">
+          Being outside, breathing, slowing down
+        </button>
+
+        <button class="answer-box" type="button" data-mood="warm">
+          Sitting somewhere warm and talking
+        </button>
+      </div>
+
+    <button class="mm-btn" id="continueBtn" type="button" disabled>
+      CONTINUE
     </button>
+
+    
   </section>
 
   <div class="mm-bottom" aria-hidden="true">
-    <img src="../assets/images/sketchbig.png" alt="">
+    <img src="assets/images/sketchbig.png" alt="">
   </div>
 
 </main>
 
 </body>
-<script src="../assets/js/javascript.js"></script>
+<script src="assets/js/javascript.js"></script>
 
 </html>
