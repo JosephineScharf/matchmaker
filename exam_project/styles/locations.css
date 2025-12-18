@@ -565,3 +565,16 @@ html, body {
     max-width: 300px;
   }
 }
+.audio-row a {
+  display: inline-block;
+  border-radius: 6px;
+}
+
+.audio-row a:hover img {
+  filter: brightness(1.05);
+  transform: scale(1.01);
+}
+
+.audio-thumb {
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
